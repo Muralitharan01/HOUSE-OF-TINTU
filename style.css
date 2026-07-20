@@ -304,3 +304,491 @@ color:#9b7c58;
 margin-bottom:35px;
 
 }
+
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.buttons{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.btn{
+
+    position:relative;
+    overflow:hidden;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    min-width:180px;
+    height:58px;
+
+    border-radius:60px;
+
+    text-decoration:none;
+
+    font-size:15px;
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    transition:.4s;
+
+}
+
+.primary{
+
+    background:#314236;
+    color:#fff;
+
+    box-shadow:0 15px 35px rgba(49,66,54,.25);
+
+}
+
+.primary:hover{
+
+    transform:translateY(-5px);
+
+    background:#24352a;
+
+    box-shadow:0 25px 45px rgba(49,66,54,.35);
+
+}
+
+.secondary{
+
+    background:transparent;
+
+    border:2px solid #314236;
+
+    color:#314236;
+
+}
+
+.secondary:hover{
+
+    background:#314236;
+
+    color:#fff;
+
+}
+
+/* Ripple */
+
+.ripple{
+
+position:absolute;
+
+border-radius:50%;
+
+transform:scale(0);
+
+animation:ripple .6s linear;
+
+background:rgba(255,255,255,.5);
+
+}
+
+@keyframes ripple{
+
+to{
+
+transform:scale(4);
+
+opacity:0;
+
+}
+
+}
+
+/* ===========================
+FOOTER
+=========================== */
+
+footer{
+
+padding:30px 20px;
+
+text-align:center;
+
+font-size:14px;
+
+color:#777;
+
+letter-spacing:1px;
+
+}
+
+/* ===========================
+SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#c7ae8b;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#f4eee8;
+
+}
+
+/* ===========================
+SHOW ANIMATION
+=========================== */
+
+.glass-card,
+.content,
+.image-box{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:all 1s ease;
+
+}
+
+.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* ===========================
+HOVER IMAGE
+=========================== */
+
+.image-box{
+
+overflow:hidden;
+
+border-radius:25px;
+
+}
+
+.image-box img{
+
+transition:1s;
+
+}
+
+.image-box:hover img{
+
+transform:scale(1.04);
+
+}
+
+/* ===========================
+TEXT ANIMATION
+=========================== */
+
+.content h1{
+
+animation:title 2s ease;
+
+}
+
+@keyframes title{
+
+0%{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.content h2{
+
+animation:title2 2.3s ease;
+
+}
+
+@keyframes title2{
+
+0%{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:992px){
+
+.glass-card{
+
+flex-direction:column;
+
+padding:35px;
+
+text-align:center;
+
+gap:35px;
+
+}
+
+.content h1{
+
+font-size:48px;
+
+}
+
+.content h2{
+
+font-size:28px;
+
+}
+
+.buttons{
+
+justify-content:center;
+
+}
+
+.image-box img{
+
+max-width:500px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+
+padding:25px;
+
+}
+
+.glass-card{
+
+padding:25px;
+
+border-radius:22px;
+
+}
+
+.content h1{
+
+font-size:38px;
+
+letter-spacing:2px;
+
+}
+
+.content h2{
+
+font-size:22px;
+
+}
+
+.content p{
+
+font-size:15px;
+
+line-height:1.8;
+
+}
+
+.quote{
+
+font-size:16px;
+
+}
+
+.image-box img{
+
+max-width:100%;
+
+}
+
+.btn{
+
+width:100%;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+}
+
+}
+
+@media(max-width:480px){
+
+body{
+
+padding:0;
+
+}
+
+.glass-card{
+
+border-radius:0;
+
+min-height:100vh;
+
+box-shadow:none;
+
+background:rgba(255,255,255,.72);
+
+}
+
+.content h1{
+
+font-size:30px;
+
+}
+
+.content h2{
+
+font-size:18px;
+
+}
+
+.tag{
+
+font-size:11px;
+
+}
+
+footer{
+
+font-size:12px;
+
+padding-bottom:25px;
+
+}
+
+}
+
+/* ===========================
+FLOATING EFFECT
+=========================== */
+
+.glass-card{
+
+animation:cardFloat 6s ease-in-out infinite;
+
+}
+
+@keyframes cardFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-6px);
+
+}
+
+}
+
+/* ===========================
+IMAGE SHADOW
+=========================== */
+
+.image-box img{
+
+filter:drop-shadow(0 30px 45px rgba(0,0,0,.15));
+
+}
+
+/* ===========================
+GLASS SHINE
+=========================== */
+
+.glass-card::before{
+
+content:"";
+
+position:absolute;
+
+left:-120%;
+
+top:0;
+
+width:80%;
+
+height:100%;
+
+background:linear-gradient(90deg,
+transparent,
+rgba(255,255,255,.45),
+transparent);
+
+transform:skewX(-25deg);
+
+animation:shine 6s infinite;
+
+pointer-events:none;
+
+}
+
+.glass-card{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+@keyframes shine{
+
+100%{
+
+left:150%;
+
+}
+
+}
